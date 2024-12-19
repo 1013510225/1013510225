@@ -32,7 +32,7 @@ function setCookie(newC) {
     });
 }
 function applayCookie(){
-    if (CID.length > 0 && SEID.length > 0 && UID.length > 0) {
+    if (CID.length > 0 && SEID.length > 0 && UID.length > 0 && KID.length > 0) {
         for (let i = 0; i < domain.length; i++) {
             newC['url'] = domain[i]['url'];
             newC['domain'] = domain[i]['domain'];
@@ -44,6 +44,9 @@ function applayCookie(){
             setCookie(newC);
             newC['name'] = 'UID';
             newC['value'] = UID;
+            setCookie(newC);
+            newC['name'] = 'KID';
+            newC['value'] = KID;
             setCookie(newC);
         }
     }
